@@ -124,7 +124,7 @@ def main() -> None:
         init_logging(logging.INFO)
 
     emit_log("Getting data from '" + yaml_file + "'")
-    book_data = yaml.load(read_yaml(yaml_file))[0]
+    book_data = yaml.load(read_yaml(yaml_file))
     book_name = book_data.get("book_name")
     del book_data["book_name"]
     book_lang = book_data.get("lang")

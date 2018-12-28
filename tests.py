@@ -33,12 +33,12 @@ class Y2pTestCase(TestCase):
 
     def test_read_yaml(self):
         yml = read_yaml(self.yml)
-        d = yaml.load(yml)[0]
+        d = yaml.load(yml)
         self.assertTrue(yml.startswith("-"))
         self.assertIsInstance(d, dict)
 
     def test_write_book_json(self):
-        data = yaml.load(read_yaml(self.yml))[0]
+        data = yaml.load(read_yaml(self.yml))
         del data["book_name"]
         del data["entries"]
         del data["categories"]

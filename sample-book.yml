@@ -1,75 +1,75 @@
--
-  book_name: sample_book
-  name: Y2P Sample Book
-  book_texture: patchouli:textures/gui/book_red.png
-  landing_text: |
-    Welcome, $(l)$(#000080)$(playername)$()!  This sample will try to help you get started using $(l)$(#006400)Y2P$().$(br2)If you have specific questions that are not covered here, please be sure to open an issue!
-  model: patchouli:book_red
-  show_progress: false
-  subtitle: Y2P Sample Subtitle Is Right Here
-  version: 1
-  lang: en_US
+---
+book_name: sample_book
+name: Y2P Sample Book
+book_texture: patchouli:textures/gui/book_red.png
+landing_text: |
+  Welcome, $(l)$(#000080)$(playername)$()!  This sample will try to help you get started using $(l)$(#006400)Y2P$().$(br2)If you have specific questions that are not covered here, please be sure to open an issue!
+model: patchouli:book_red
+show_progress: false
+subtitle: Y2P Sample Subtitle Is Right Here
+version: 1
+lang: en_US
 
-  categories:
-    - name: Category One
-      description: This is the first sample category
-      icon: minecraft:cake
-    - name: Category Two
-      description: This is the second sample category
-      icon: minecraft:cake
-    - name: Category Three
-      description: This is the third sample category
-      icon: minecraft:cake
-    - name: Category Four
-      description: This is the fourth sample category
-      icon: minecraft:cake
-    - name: Category Fifth
-      description: This is the fifth sample category
-      icon: minecraft:cake
+categories:
+  - name: Category One
+    description: This is the first sample category
+    icon: minecraft:cake
+  - name: Category Two
+    description: This is the second sample category
+    icon: minecraft:cake
+  - name: Category Three
+    description: This is the third sample category
+    icon: minecraft:cake
+  - name: Category Four
+    description: This is the fourth sample category
+    icon: minecraft:cake
+  - name: Category Fifth
+    description: This is the fifth sample category
+    icon: minecraft:cake
 
-  entries:
-    - name: Sample Entry One
-      icon: minecraft:cake
-      category: category_one
-      pages:
-        - type: text
-          text: Text One Two three four five lorem ipsum riker ipsum
-        - type: spotlight
-          item: minecraft:cake
-          text: Cake spotlight!$(br2)This should be a new paragraph.
-    - name: Sample Entry Two
-      icon: minecraft:cake
-      category: category_two
-      pages:
-        - type: text
-          text: Text One Two three four five lorem ipsum riker ipsum
-        - type: spotlight
-          item: minecraft:cake
-          text: Cake spotlight!$(br2)This should be a new paragraph.
-    - name: Sample Entry Three
-      icon: minecraft:cake
-      category: category_three
-      pages:
-        - type: text
-          text: Text One Two three four five lorem ipsum riker ipsum
-        - type: spotlight
-          item: minecraft:cake
-          text: Cake spotlight!$(br2)This should be a new paragraph.
-    - name: Sample Entry Four
-      icon: minecraft:cake
-      category: category_four
-      pages:
-        - type: text
-          text: Text One Two three four five lorem ipsum riker ipsum
-        - type: spotlight
-          item: minecraft:cake
-          text: Cake spotlight!$(br2)This should be a new paragraph.
-    - name: Sample Entry Five
-      icon: minecraft:cake
-      category: category_five
-      pages:
-        - type: text
-          text: Text One Two three four five lorem ipsum riker ipsum
-        - type: spotlight
-          item: minecraft:cake
-          text: Cake spotlight!$(br2)This should be a new paragraph.
+entries:
+  - name: Sample Entry One
+    icon: minecraft:cake
+    category: category_one
+    pages:
+      - type: text
+        text: Text One Two three four five lorem ipsum riker ipsum
+      - type: spotlight
+        item: minecraft:cake
+        text: Cake spotlight!$(br2)This should be a new paragraph.
+  - name: Sample Entry Two
+    icon: minecraft:cake
+    category: category_two
+    pages:
+      - type: text
+        text: Text One Two three four five lorem ipsum riker ipsum
+      - type: spotlight
+        item: minecraft:cake
+        text: Cake spotlight!$(br2)This should be a new paragraph.
+  - name: Sample Entry Three
+    icon: minecraft:cake
+    category: category_three
+    pages:
+      - type: text
+        text: Text One Two three four five lorem ipsum riker ipsum
+      - type: spotlight
+        item: minecraft:cake
+        text: Cake spotlight!$(br2)This should be a new paragraph.
+  - name: Sample Entry Four
+    icon: minecraft:cake
+    category: category_four
+    pages:
+      - type: text
+        text: Text One Two three four five lorem ipsum riker ipsum
+      - type: spotlight
+        item: minecraft:cake
+        text: Cake spotlight!$(br2)This should be a new paragraph.
+  - name: Sample Entry Five
+    icon: minecraft:cake
+    category: category_five
+    pages:
+      - type: text
+        text: Text One Two three four five lorem ipsum riker ipsum
+      - type: spotlight
+        item: minecraft:cake
+        text: Cake spotlight!$(br2)This should be a new paragraph.
