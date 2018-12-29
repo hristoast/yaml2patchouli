@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
+import re
+
 from setuptools import find_packages, setup
+
+
+with open('y2p/y2p.py', 'r') as f:
+    __version__ = re.search(
+        r'__version__\s*=\s*[\'"]([^\'"]*)[\'"]',
+        f.read()).group(1)
+
+with open('README.md', 'r') as r:
+    readme = ' '.join(r.readlines())
+    r.close()
 
 setup(
     name="yaml2patchouli",
-    version="0.1",
+    version=__version__,
     author="Hristos N. Triantafillou",
-    author_email="<me@hristos.lol>",
+    author_email="<y2p@hristos.lol>",
     maintainer="Hristos N. Triantafillou",
-    maintainer_email="<me@hristos.lol>",
-    url="https://hristos.lol/",
-    description="Stupid tool for abstracting a Patchouli book as YAML.",
-    long_description="Stupid tool for abstracting a Patchouli book as YAML.",
-    download_url="https://hristos.lol/",
+    maintainer_email="<y2p@hristos.lol>",
+    url="https://github.com/hristoast/yaml2patchouli",
+    description="Create Patchouli books from a single YAML file.",
+    long_description=readme,
+    download_url="https://github.com/hristoast/yaml2patchouli",
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -27,5 +39,5 @@ setup(
     license="GPLv3+",
     packages=find_packages(),
     entry_points={'console_scripts':
-                  ['{0} = {0}.core:main'.format("y2p"),
-                   '{0} = {1}.core:main'.format("yaml2patchouli", "y2p"), ]})
+                  ['y2p = y2p.y2p:main',
+                   'yaml2patchouli = y2p.y2p:main', ]})
