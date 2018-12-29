@@ -1,75 +1,143 @@
 ---
-book_name: sample_book
+#
+# Any Patchouli value that's not shown below can be inserted using the same
+# key/value structure as Patchouli itself, and it will be added to the
+# generated book.
+#
+# Refer to the below link for Patchouli's formatting documentation:
+# https://github.com/Vazkii/Patchouli/wiki/Text-Formatting-101
+#
+# Below is the YAML syntax reference:
+# https://yaml.org/refcard.html
+#
 name: Y2P Sample Book
+#
+# The 'book_name' key is specific to y2p and is discarded before generating
+# the book.  This is how the book directory name is defined e.g.
+# patchouli_books/some_cool_book_name comes from
+# 'book_name: some_cool_book_name' in a y2p yaml file.
+#
+book_name: sample_book
+#
+# Patchouli's built in texture names can be found here, under 'book_texture':
+# https://github.com/Vazkii/Patchouli/wiki/Book-JSON-Format
+#
 book_texture: patchouli:textures/gui/book_red.png
-landing_text: |
+landing_text: >-
   Welcome, $(l)$(#000080)$(playername)$()!  This sample will try to help you get started using $(l)$(#006400)Y2P$().$(br2)If you have specific questions that are not covered here, please be sure to open an issue!
+#
+# Patchouli's built in texture names can be found here, under 'model:
+# https://github.com/Vazkii/Patchouli/wiki/Book-JSON-Format
+#
 model: patchouli:book_red
 show_progress: false
 subtitle: Y2P Sample Subtitle Is Right Here
 version: 1
+#
+# The generated directory is all lowercase e.g. 'en_us'
+#
 lang: en_US
 
+#
+# Categories are defined below, generated file names come from the 'name' key
+# and consist of only alphanumerics and the '_' character.  They are also all
+# lowercase.
+#
 categories:
-  - name: Category One
-    description: This is the first sample category
-    icon: minecraft:cake
-  - name: Category Two
-    description: This is the second sample category
-    icon: minecraft:cake
-  - name: Category Three
-    description: This is the third sample category
-    icon: minecraft:cake
-  - name: Category Four
-    description: This is the fourth sample category
-    icon: minecraft:cake
-  - name: Category Fifth
-    description: This is the fifth sample category
+  - name: Category One  # Would be category_one_category.json
+    description: >-
+      This is the first sample category
+    #
+    # Icons take an item ID for a value; check item IDs with F3 + h while in-game
+    #
     icon: minecraft:cake
 
-entries:
-  - name: Sample Entry One
+  - name: Category Two  # Would be category_two_category.json
+    description: >-
+      This is the second sample category
     icon: minecraft:cake
-    category: category_one
+
+  - name: Category Three  # Would be category_three_category.json
+    description: >-
+      This is the third sample category
+    icon: minecraft:cake
+
+  - name: Category Four  # Would be category_four_category.json
+    description: >-
+      This is the fourth sample category
+    icon: minecraft:cake
+
+  - name: Category Five  # Would be category_five_category.json
+    description: >-
+      This is the fifth sample category
+    icon: minecraft:cake
+
+#
+# Entries are defined below, generated file names come from the 'name' key and
+# consist of only alphanumerics and the '_' character.  They are also all
+# lowercase.
+#
+entries:
+  - name: Sample Entry One  # Would be sample_entry_one_entry.json
+    icon: minecraft:cake
+    category: category_one  # Category name defined as "Category One"
     pages:
       - type: text
-        text: Text One Two three four five lorem ipsum riker ipsum
+        text: >-
+          Text One Two three four five lorem ipsum riker ipsum
       - type: spotlight
         item: minecraft:cake
-        text: Cake spotlight!$(br2)This should be a new paragraph.
+        text: >-
+          Cake spotlight!$(br2)This should be a new paragraph.
+
   - name: Sample Entry Two
     icon: minecraft:cake
-    category: category_two
+    category: category_two  # Category name defined as "Category Two"
     pages:
       - type: text
-        text: Text One Two three four five lorem ipsum riker ipsum
+        text: >-
+          Text One Two three four five lorem ipsum riker ipsum
       - type: spotlight
         item: minecraft:cake
-        text: Cake spotlight!$(br2)This should be a new paragraph.
+        text: >-
+          Cake spotlight!$(br2)This should be a new paragraph.
+
   - name: Sample Entry Three
     icon: minecraft:cake
-    category: category_three
+    category: category_three  # Category name defined as "Category Three"
     pages:
       - type: text
-        text: Text One Two three four five lorem ipsum riker ipsum
+        text: >-
+          Text One Two three four five lorem ipsum riker ipsum
       - type: spotlight
         item: minecraft:cake
-        text: Cake spotlight!$(br2)This should be a new paragraph.
+        text: >-
+          Cake spotlight!$(br2)This should be a new paragraph.
+
   - name: Sample Entry Four
     icon: minecraft:cake
-    category: category_four
+    category: category_four  # Category name defined as "Category Four"
     pages:
       - type: text
-        text: Text One Two three four five lorem ipsum riker ipsum
+        text: >-
+          Text One Two three four five lorem ipsum riker ipsum
       - type: spotlight
         item: minecraft:cake
-        text: Cake spotlight!$(br2)This should be a new paragraph.
+        text: >-
+          Cake spotlight!$(br2)This should be a new paragraph.
+
   - name: Sample Entry Five
     icon: minecraft:cake
-    category: category_five
+    category: category_five  # Category name defined as "Category Five"
     pages:
       - type: text
-        text: Text One Two three four five lorem ipsum riker ipsum
+        text: >-
+          Text One Two three four five lorem ipsum riker ipsum
       - type: spotlight
         item: minecraft:cake
-        text: Cake spotlight!$(br2)This should be a new paragraph.
+        text: >-
+          Cake spotlight!$(br2)This should be a new paragraph.
+
+  #
+  # TODO: templates will go here once they are supported
+  #
