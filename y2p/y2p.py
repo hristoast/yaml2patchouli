@@ -135,7 +135,7 @@ def parse_argv() -> None:
     return parser.parse_args()
 
 
-def run() -> None:
+def main() -> None:
     parsed = parse_argv()
 
     clean = False
@@ -209,13 +209,9 @@ def run() -> None:
     emit_log("Completed generation of the book '{0}' into the directory '{1}'!".format(book_name, out_dir))
 
 
-def main():
-    if __name__ == '__main__':
-        try:
-            run()
-        except KeyboardInterrupt:
-            print("  CTRL-C Received, exiting...")
-            sys.exit(2)
-
-
-main()
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("  CTRL-C Received, exiting...")
+        sys.exit(2)
