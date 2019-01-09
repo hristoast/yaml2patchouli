@@ -14,7 +14,7 @@ except ImportError:
     sys.exit(1)
 DESC = "Create Patchouli books from a single YAML file."
 LOGFMT = '%(asctime)s | %(message)s'
-__version__ = "0.2"
+__version__ = "0.3"
 
 
 def create_book_dirs(book_name: str, entries: list, lang: str, out: str) -> None:
