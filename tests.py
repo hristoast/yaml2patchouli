@@ -66,11 +66,12 @@ class Y2pTestCase(TestCase):
         self.assertTrue(os.path.isdir(
             os.path.join(self.out, "patchouli_books", self.book_name, self.lang,
                          "entries")))
+        # TODO: test for entry sub dir
 
     def test_read_yaml(self):
         yml = read_yaml(self.yml)
         d = yaml.load(yml)
-        self.assertTrue(yml.startswith("-"))
+        self.assertTrue(yml.startswith("---"))
         self.assertIsInstance(d, dict)
 
     def test_write_book_json(self):
