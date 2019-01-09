@@ -190,7 +190,11 @@ def main() -> None:
     book_dir = os.path.join(out_dir, "patchouli_books", book_name)
     if clean:
         emit_log("Removing book directories in '" + book_dir + "'")
-        shutil.rmtree(book_dir)
+        try:
+            shutil.rmtree(book_dir)
+        except FileNotFoundError:
+            # Can't remove book_dir because it doesn't exist.
+            pass
 
     emit_log("Creating book directories in '" + book_dir + "'")
     create_book_dirs(book_name, entries, book_lang, out_dir)
