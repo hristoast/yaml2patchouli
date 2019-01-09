@@ -32,7 +32,7 @@ landing_text: >-
 model: patchouli:book_red
 show_progress: false
 subtitle: Y2P Sample Subtitle Is Right Here
-version: 1
+version: 2
 #
 # The generated directory is all lowercase e.g. 'en_us'
 #
@@ -44,33 +44,38 @@ lang: en_US
 # lowercase.
 #
 categories:
-  - name: Category One  # Would be category_one_category.json
+  - name: One  # Would be one_category.json
     description: >-
       This is the first sample category
     #
     # Icons take an item ID for a value; check item IDs with F3 + h while in-game
     #
     icon: minecraft:cake
+    sortnum: 0
 
-  - name: Category Two  # Would be category_two_category.json
+  - name: Two  # Would be two_category.json
     description: >-
       This is the second sample category
     icon: minecraft:cake
+    sortnum: 1
 
-  - name: Category Three  # Would be category_three_category.json
+  - name: Three  # Would be three_category.json
     description: >-
       This is the third sample category
     icon: minecraft:cake
+    sortnum: 2
 
-  - name: Category Four  # Would be category_four_category.json
+  - name: Four  # Would be four_category.json
     description: >-
       This is the fourth sample category
     icon: minecraft:cake
+    sortnum: 3
 
-  - name: Category Five  # Would be category_five_category.json
+  - name: Five  # Would be five_category.json
     description: >-
       This is the fifth sample category
     icon: minecraft:cake
+    sortnum: 4
 
 #
 # Entries are defined below, generated file names come from the 'name' key and
@@ -80,11 +85,12 @@ categories:
 entries:
   - name: Sample Entry One  # Would be sample_entry_one_entry.json
     icon: minecraft:cake
-    category: category_one  # Category name defined as "Category One"
+    category: one_category  # Category name defined as "One"
     pages:
       - type: text
         text: >-
           Text One Two three four five lorem ipsum riker ipsum
+
       - type: spotlight
         item: minecraft:cake
         text: >-
@@ -92,35 +98,121 @@ entries:
 
   - name: Sample Entry Two
     icon: minecraft:cake
-    category: category_two  # Category name defined as "Category Two"
+    category: two_category  # Category name defined as "Two"
     pages:
       - type: text
         text: >-
           Text One Two three four five lorem ipsum riker ipsum
+
       - type: spotlight
         item: minecraft:cake
         text: >-
           Cake spotlight!$(br2)This should be a new paragraph.
+
+      # A simple multiblock example using a vanilla block
+      - type: multiblock
+        name: Intricate Dirt
+        multiblock:
+          mapping:
+            D: "minecraft:dirt"
+          pattern:
+            - - "  D  "
+              - "  D  "
+              - "DDDDD"
+              - "  D  "
+              - "  D  "
+            - - "     "
+              - "  D  "
+              - " DDD "
+              - "  D  "
+              - "     "
+            - - "     "
+              - "     "
+              - "  D  "
+              - "     "
+              - "     "
+            - - "     "
+              - "     "
+              - "  D  "
+              - "     "
+              - "     "
+            - - "     "
+              - "     "
+              - "  D  "
+              - "     "
+              - "     "
+            - - "     "
+              - "  D  "
+              - " DDD "
+              - "  D  "
+              - "     "
+            - - "     "
+              - "  D  "
+              - " DDD "
+              - "  D  "
+              - "     "
+            - - "  D  "
+              - "  D  "
+              - "DDDDD"
+              - "  D  "
+              - "0 D  "
+        text: >-
+          This can be any size, what's shown is a minimal example of what's required.
 
   - name: Sample Entry Three
     icon: minecraft:cake
-    category: category_three  # Category name defined as "Category Three"
+    category: three_category  # Category name defined as "Three"
     pages:
       - type: text
         text: >-
           Text One Two three four five lorem ipsum riker ipsum
+
       - type: spotlight
         item: minecraft:cake
         text: >-
           Cake spotlight!$(br2)This should be a new paragraph.
 
+      # A more complex multiblock using modded blocks
+      - type: multiblock
+        name: Tinkers' Smeltery
+        multiblock:
+          mapping:
+            # Seared Bricks
+            A: "tconstruct:seared[type=brick]"
+            # Smeltery Drain
+            B: "tconstruct:smeltery_io"
+            # Smeltery Controller
+            C: "tconstruct:smeltery_controller"
+            # Seared Tank
+            D: "tconstruct:seared_tank"
+            # Faucet
+            E: "tconstruct:faucet"
+            # Casting Basin
+            F: "tconstruct:casting[type=basin]"
+          pattern:
+            - - " AAA "
+              - "A   A"
+              - "A   D"
+              - "A   C"
+              - " BBB "
+              - "0EEE "
+            - - "     "
+              - " AAA "
+              - " AAA "
+              - " AAA "
+              - "     "
+              - " FFF "
+        text: >-
+          $(l)This requires the mod Tinkers' Construct!$()
+
   - name: Sample Entry Four
     icon: minecraft:cake
-    category: category_four  # Category name defined as "Category Four"
+    category: four_category  # Category name defined as "Four"
     pages:
       - type: text
         text: >-
           Text One Two three four five lorem ipsum riker ipsum
+
       - type: spotlight
         item: minecraft:cake
         text: >-
@@ -128,11 +220,12 @@ entries:
 
   - name: Sample Entry Five
     icon: minecraft:cake
-    category: category_five  # Category name defined as "Category Five"
+    category: five_category  # Category name defined as "Five"
     pages:
       - type: text
         text: >-
           Text One Two three four five lorem ipsum riker ipsum
+
       - type: spotlight
         item: minecraft:cake
         text: >-
