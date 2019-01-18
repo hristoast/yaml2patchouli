@@ -27,7 +27,7 @@ class Y2pTestCase(TestCase):
             self.book_name,
             self.lang,
             "categories",
-            "category_one_category.json")
+            "one_category.json")
         self.entry_file = os.path.join(
             self.out,
             "patchouli_books",
@@ -98,7 +98,7 @@ class Y2pTestCase(TestCase):
         with open(self.cat_file, 'r') as f:
             s = ' '.join(f.readlines())
         d = json.loads(s)
-        self.assertTrue(d["name"] == "Category One")
+        self.assertTrue(d["name"] == "One")
 
     def test_write_thing_entry(self):
         self.assertTrue(os.path.isfile(self.entry_file))

@@ -1,0 +1,17 @@
+image: archlinux
+packages:
+  - flake8
+  - python-pip
+  - python-yaml
+sources:
+  - https://git.sr.ht/~hristoast/yaml2patchouli
+tasks:
+  - make-all: |
+      mkdir ~/.config || printf OK
+      cat > ~/.config/flake8 <<EOF
+      [flake8]
+      ignore = E501, E402
+      max-line-length = 160
+      EOF
+      cd yaml2patchouli
+      make

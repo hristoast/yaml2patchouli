@@ -1,5 +1,7 @@
 
-.DEFAULT_GOAL:= install
+.DEFAULT_GOAL:= all
+
+all: test install
 
 install:
 	pip3 install --user $(CURDIR)
