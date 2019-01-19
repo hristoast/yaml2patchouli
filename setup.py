@@ -20,10 +20,10 @@ setup(
     author_email="<y2p@hristos.lol>",
     maintainer="Hristos N. Triantafillou",
     maintainer_email="<y2p@hristos.lol>",
-    url="https://github.com/hristoast/yaml2patchouli",
+    url="https://git.sr.ht/~hristoast/yaml2patchouli",
     description="Create Patchouli books from a single YAML file.",
     long_description=readme,
-    download_url="https://github.com/hristoast/yaml2patchouli",
+    download_url="https://git.sr.ht/~hristoast/yaml2patchouli",
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
